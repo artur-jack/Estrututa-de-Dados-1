@@ -7,4 +7,4 @@ theme:
     favicon: https://capju.netlify.app/logo.png
 
 nav:
-    - Sobre: index.md
+    - Sobre: Doc/index.md
