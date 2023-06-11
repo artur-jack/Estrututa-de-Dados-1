@@ -66,6 +66,14 @@ Além de também ser **in-place**, pois a ordenação ocorre diretamente no arra
 
 Esse é o que tem o melhor resultado comparado com os dois já mostrados. Apesar de ser um algoritmo elementar, ele é importante para implementação de algoritmos mais complexos.
 
+Ele pega um valor do vetor (começando pelo segundo elemento, pois o primeiro já é ordenado) e coloca numa variavel auxiliar(tmp, i=1), vê se esse valor(tmp) é menor que seus antecessores e se for, os valores maiores sobem e j--. Esse valor(tmp) é recolocado em v[j] se seu antecessor for <= que tmp.
+
+Sua complexidade assintótica no pior caso e no caso médio é de **O(n²)**, onde "n" é o tamanho do conjunto de dados a ser ordenado. No entanto, no melhor caso, quando o conjunto de dados já está quase ordenado, o insertion sort tem uma complexidade de tempo de O(n), o que o torna eficiente para conjuntos de dados pequenos ou quase ordenados.
+
 <p align="center">
     <img width="200" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif"> 
 </p>
+
+O insertion sort é considerado um algoritmo **adaptativo**. Isso significa que, se o conjunto de dados já estiver parcialmente ordenado, o insertion sort realizará menos comparações e trocas, aproveitando a ordem parcial existente.
+
+Além disso **é estável**, o que significa que elementos iguais não são reordenados durante a classificação. E **in-place**, pois a ordenação ocorre diretamente no array de entrada, sem a necessidade de utilizar espaço adicional.
