@@ -26,7 +26,7 @@ selectionSort(vetor, left+1, right);
 
 void selectionSortSemRecursao(Item *vetor, int left, int right){
 
-for(int i = left; i <= right; i++){
+for(int i = left; i < right; i++){
 
     int menor = i;   // o menor valor começa sendo o mais a esquerda
     for(int j = i+1; j <= right; j++){ //percorre o vetor
@@ -34,7 +34,7 @@ for(int i = left; i <= right; i++){
             menor = j;                    // e j vira o menor valor
         }
     }
-    swap(vetor[menor], vetor[left]);  //o valor no indice do menor valor achado troca de lugar e vai para a posição
+    swap(vetor[i], vetor[menor]);  //o valor no indice do menor valor achado troca de lugar e vai para a posição
                                   //do item no indice esquerda (Assim o menor elemento fica mais a esquerda do vetor)
 }
 }
@@ -47,10 +47,11 @@ int main(){
         vetor[i] = rand()%100;  //preenche o vetor com números aleatórios DE 0 a 100
     }
     selectionSort(vetor, 0, 9);
-    for (int j = 0; j < 10; j++)
+    //caso queira printar o vetor, só descomentar essa parte abaixo:
+    /*for (int j = 0; j < 10; j++)
     {
         printf("%d ",vetor[j]);
     }
-    
+    */
     return 0;
 }
