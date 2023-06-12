@@ -77,3 +77,26 @@ Sua complexidade assintótica no pior caso e no caso médio é de **O(n²)**, on
 O insertion sort é considerado um algoritmo **adaptativo**. Isso significa que, se o conjunto de dados já estiver parcialmente ordenado, o insertion sort realizará menos comparações e trocas, aproveitando a ordem parcial existente.
 
 Além disso **é estável**, o que significa que elementos iguais não são reordenados durante a classificação. E **in-place**, pois a ordenação ocorre diretamente no array de entrada, sem a necessidade de utilizar espaço adicional.
+
+## Shell Sort
+
+Tem como ideia a ordenação parcial a cada passagem utilizando um insertion sort(um pouco modificado) onde adiciona um parametro h nesse insert sort que diz o número de saltos a serem feitos.Quando h=1, corresponde ao insertion sort padrão. 
+
+- Diminui o número de movimentações
+- Troca de itens que estão distantes um do outro
+- Separados a h distância
+- São rearranjados, resultando uma sequencia ordenada para a distância h (h-ordenada)
+- Quando h=1, corresponde ao Insertion Sort
+- A dificuldade é determinar o valor de h
+
+A escolha dos saltos é importante para o desempenho do algoritmo.
+
+- sequencias múltiplas de 2 não performam
+bem:
+- 1 2 4 8 16 32 64 128 256...
+- itens em posições pares não confrontam itens em posições ímpares até o fim do processo e, vice e versa
+- Implementação é similar ao algoritmo de inserção
+
+![Shell Sort](https://j.gifs.com/vQDGWb.gif)
+
+![Assistir animação completa](https://www.youtube.com/embed/qzXAVXddcPU)
