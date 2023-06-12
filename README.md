@@ -38,7 +38,7 @@ execução
 
 Ele vai no vetor procurando o menor elemento, quando ele encontra ele joga pro início, vai pra segunda posição e procura o menor elemento do subvetor e joga nessa posição assim sucessivamente.
 
-Sua complexidade assintótica é **o(n²)**. O que significa que ele não é eficiente para grandes conjuntos de dados.
+Sua complexidade assintótica é **o(n²)**. O que significa que ele não é eficiente para grandes conjuntos de dados. Além de **não ser estável**.
 
 <p align="center">
     <img width="80" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif"> 
@@ -58,7 +58,7 @@ No melhor caso, o algoritmo executa o(n) operações relevantes, onde n represen
     <img width="250" src="https://i.stack.imgur.com/XNbE0.gif"> 
 </p>
 
-Ele **não é adaptativo**, pois não leva em consideração o estado inicial dos elementos a serem ordenados.
+Ele **não é adaptativo**, pois não leva em consideração o estado inicial dos elementos a serem ordenados.E também **é estável**, pois preserva a ordem relativa dos elementos iguais em sua ordenação. 
 
 Além de também ser **in-place**, pois a ordenação ocorre diretamente no array de entrada, sem a necessidade de utilizar espaço adicional. Assim como o selection sort, o bubble sort não é considerado eficiente para conjuntos de dados grandes.
 
@@ -80,6 +80,8 @@ Além disso **é estável**, o que significa que elementos iguais não são reor
 
 ## Shell Sort
 
+É um algoritmoque tem melhor desempenho comparado aos algoritmos elementares, mas ainda não é tão eficiente quanto algoritmos mais avançados como o QuickSort e o MergeSort.
+
 Tem como ideia a ordenação parcial a cada passagem utilizando um insertion sort(um pouco modificado) onde adiciona um parametro h nesse insert sort que diz o número de saltos a serem feitos.Quando h=1, corresponde ao insertion sort padrão. 
 
 - Diminui o número de movimentações
@@ -97,6 +99,21 @@ bem:
 - itens em posições pares não confrontam itens em posições ímpares até o fim do processo e, vice e versa
 - Implementação é similar ao algoritmo de inserção
 
-![Shell Sort](https://j.gifs.com/vQDGWb.gif)
+
+<p align="center">
+    <img width="300" src="https://j.gifs.com/vQDGWb.gif"> 
+</p>
 
 https://www.youtube.com/embed/qzXAVXddcPU
+
+É um algoritmo **adaptativo e não estável**, que no pior caso, shellsort não é
+necessariamente quadrático (Sedgewick)
+- As comparações são proporcionais a **O(n^(3/2)) CASO MÉDIO**
+- Pior caso com pior sequencia de intervalos h: **O(n²) PIOR CASO**
+- Melhor caso com pior sequencia de intervalos h: **O(n log2 n) MELHOR CASO**
+- Pratt, Vaughan Ronald (1979). Shellsort and Sorting Networks (Outstanding Dissertations in the Computer Sciences)
+- Melhor caso com uma boa sequencia de
+intervalos h: O(n log n)
+
+Quanto à sua operação in-place, o Shell Sort **pode ser implementado de forma in-place**, o que significa que não requer espaço adicional além do array original que está sendo ordenado. No entanto, algumas variantes do algoritmo podem exigir espaço adicional para armazenar variáveis auxiliares.
+
