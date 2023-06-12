@@ -97,6 +97,6 @@ bem:
 - itens em posições pares não confrontam itens em posições ímpares até o fim do processo e, vice e versa
 - Implementação é similar ao algoritmo de inserção
 
-https://www.youtube.com/embed/qzXAVXddcPU
+![Shell Sort](https://j.gifs.com/vQDGWb.gif)
 
-<a>
+https://www.youtube.com/embed/qzXAVXddcPU
