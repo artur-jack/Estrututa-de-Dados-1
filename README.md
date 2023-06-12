@@ -101,7 +101,7 @@ bem:
 
 
 <p align="center">
-    <img width="300" src="https://j.gifs.com/vQDGWb.gif"> 
+    <img width="400" src="https://j.gifs.com/vQDGWb.gif"> 
 </p>
 
 https://www.youtube.com/embed/qzXAVXddcPU
@@ -117,3 +117,29 @@ intervalos h: O(n log n)
 
 Quanto à sua operação in-place, o Shell Sort **pode ser implementado de forma in-place**, o que significa que não requer espaço adicional além do array original que está sendo ordenado. No entanto, algumas variantes do algoritmo podem exigir espaço adicional para armazenar variáveis auxiliares.
 
+## Merge Sort
+
+Algoritmo baseado na operação: merge (combinar, juntar,
+fundir)
+
+Utiliza do método dividir e conquistar. Divide em pequenas partes e ordena essas partes, depois combina essas pequenas partes já ordenadas até formar uma única sequência ordenada. Geralmente é utilizada uma abordagem recursiva que cria arrays auxiliares para a mesclagem dos subconjuntos. 
+
+<p align="center">
+    <img width="300" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif"> 
+</p>
+
+### **Abordagem Top-Down** (abordagem recursiva)
+
+- A cada chamada, divide a entrada em sub-vetores para serem ordenados
+- merge_sort(int *v, int l, int r)
+- Quando chegar em um tamanho unitário, ou seja, ordenado em 1
+- Volta fazendo o merge ordenado
+- merge(int *v, int l, int meio, int r)
+- Utiliza um vetor auxiliar
+
+Sobre suas características: 
+
+- Sua complexidade é **O(n log n)** para todos os casos.
+- **Não é adaptativo**.
+- É um algoritmo **estável**.
+- **Não é in-place**, pois requer espaço adicional para realizar as operações de divisão e mesclagem dos subconjuntos. 
