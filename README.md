@@ -137,9 +137,87 @@ Utiliza do método dividir e conquistar. Divide em pequenas partes e ordena essa
 - merge(int *v, int l, int meio, int r)
 - Utiliza um vetor auxiliar
 
-Sobre suas características: 
+### Sobre suas características: 
 
 - Sua complexidade é **O(n log n)** para todos os casos.
 - **Não é adaptativo**.
 - É um algoritmo **estável**.
 - **Não é in-place**, pois requer espaço adicional para realizar as operações de divisão e mesclagem dos subconjuntos. 
+
+## Quick Sort
+
+Assim como o merge sort ele também usa o método dividir e conquistar, particionando o vetor em sub-vetores e ordenando cada sub-vetor independentemente.
+
+### Merge X Quick
+
+#### Merge:
+    - Divide 
+    - Ordena separadamente
+    - Combina reordenando, conquistando um vetor mais ordenado
+    - Repete
+
+#### Quick:
+
+    - Rearranja
+    - Conquista um elemento ordenado e dois subvetores pseudo-ordenados
+    - Divide
+    - Repete
+
+<p align="center">
+    <img width="280" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif"> 
+</p>
+
+Ideia:
+- Particionar (separar) - processo crucial no quick
+- Escolhar um elemento de referência: pivot
+- Rearranjar todos elementos posteriores ao pivot
+- Reposicionar o pivot
+- Dividir o vetor em dois
+- Repetir o processo até ordenar todos os elementos
+
+Em resumo, a função quickSort divide o vetor em subvetores menores em torno de um pivô e, em seguida, recursivamente, ordena os subvetores à esquerda e à direita do pivô até que todo o vetor esteja ordenado.
+
+O algoritmo Quicksort é conhecido por sua eficiência média e é amplamente utilizado para ordenar vetores em diversas aplicações.
+
+### Características:
+
+- **Não estável.**
+- **Não é adaptativo**.  cada elemento na sua posição correta, não contribui para a ordenação do restante uma vez que a próxima divisão ocorrerá somente uma posição à frente do particiona atual.
+
+A complexidade assintótica do QuickSort depende da implementação e da escolha do pivô. Em média, seu desempenho é muito bom, com complexidade de tempo esperada de O(n log n).
+
+- Sua complexidade em **média é O(n log n)**.
+- **Pior caso**: n²/2 comparações. **(O(n²))**
+    - Muito itens repetidos, (quase) ordenados, reverso caem nos piores casos
+
+Para fugir do pior caso, estratégias como a escolha do **pivô mediano ou a seleção aleatória do pivô** são frequentemente utilizadas. Além disso, técnicas como o QuickSort de três vias ou o QuickSort com inserção podem ser aplicadas para melhorar o desempenho em certas situações, tornando o algoritmo mais eficiente em casos reais.
+
+### Exemplo de uso:
+
+Suponha que temos o seguinte vetor: [5, 2, 8, 9, 3, 1].
+Chamada da função quickSort(vetor, 0, 5):
+
+Primeira chamada recursiva:
+
+Chama a função partition e retorna o índice p (nesse exemplo, suponha que seja 2).
+
+Chama quickSort(vetor, 0, 1), que ordena o subvetor [5, 2].
+
+Chama quickSort(vetor, 3, 5), que ordena o subvetor [9, 3, 1].
+
+Chamada recursiva de quickSort(vetor, 0, 1):
+
+Chama a função partition e retorna o índice p (nesse exemplo, suponha que seja 1).
+Chama quickSort(vetor, 0, 0), que ordena o subvetor [5].
+
+Chama quickSort(vetor, 2, 1) (não faz nada, pois r <= l).
+
+Chamada recursiva de quickSort(vetor, 3, 5):
+
+Chama a função partition e retorna o índice p (nesse exemplo, suponha que seja 4).
+
+Chama quickSort(vetor, 3, 3) (não faz nada, pois r <= l).
+
+Chama quickSort(vetor, 5, 5) (não faz nada, pois r <= l).
+
+Ao final das chamadas recursivas, o vetor resultante será [1, 2, 3, 5, 8, 9], que está ordenado de forma crescente.
