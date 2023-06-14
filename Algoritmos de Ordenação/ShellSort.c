@@ -21,7 +21,8 @@ void insertionSortH(Item *v, int left, int right, int h){
 void shellSort(Item *v, int left, int right){
 
     int h;
-    for (int h = 1; h <= (right-left)/9; h=3*h+1) //com esse laço ele vai passar por 1, 4, 13, 40, 121, 364...
+    int t = (right-left)+1;
+    for (h = 1; h <= (t-1)/9; h=3*h+1) //com esse laço ele vai passar por 1, 4, 13, 40, 121, 364...
     {
         for(;h>0; h=h/3){
             insertionSortH(v, left, right, h);
