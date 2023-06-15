@@ -40,6 +40,22 @@ void quickSort(int *v,  int l, int r)
 	quickSort(v, p+1, r);//usa a recursão para ordenar o subvetor à direita do pivô, ou seja, do índice p+1 até r
 }
 
+void quick_sortM3I(int *v,  int l, int r) //mediana de 3
+{
+    if(r-l<=15){
+        return;
+    } 
+    
+    exch(v[(l+r)/2], v[r-1]);
+    compexch(v[l], v[r-1]);
+    compexch(v[l], v[r]);
+    compexch(v[r-1], v[r]);
+
+    int p = partitionRSEDGEWICK(v, l+1, r-1);
+	quick_sortM3I(v, l, p-1);
+	quick_sortM3I(v, p+1, r);
+}
+
 int main(){
 
     Item vetor[100];
