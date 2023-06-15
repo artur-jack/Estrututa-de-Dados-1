@@ -1,11 +1,17 @@
 # Algoritmos de Ordenação
 
-- Bubble Sort
-- Selection Sort
-- Insertion Sort
-- Shell Sort
-- Quick Sort
-- Merge Sort
+- Bubble Sort:
+    - O(n^2), Não adaptativo, estável e in-place
+- Selection Sort:
+    - O(n^2), Não adaptativo, estável e in-place
+- Insertion Sort:
+    - O(n^2), adaptativo, estável e in-place
+- Shell Sort:
+    - O(n^2), adaptativo, Não estável e in-place
+- Quick Sort:
+    - O(n log n), Não é adaptativo, Não é estável e in-place
+- Merge Sort:
+    - O(n log n), Não adaptativo, estável e Não é in-place
 
 ## Complexidade Assintótica
 
@@ -80,7 +86,7 @@ Além disso **é estável**, o que significa que elementos iguais não são reor
 
 ## Shell Sort
 
-É um algoritmoque tem melhor desempenho comparado aos algoritmos elementares, mas ainda não é tão eficiente quanto algoritmos mais avançados como o QuickSort e o MergeSort.
+É um algoritmo que tem melhor desempenho comparado aos algoritmos elementares, mas ainda não é tão eficiente quanto algoritmos mais avançados como o QuickSort e o MergeSort.
 
 Tem como ideia a ordenação parcial a cada passagem utilizando um insertion sort(um pouco modificado) onde adiciona um parametro h nesse insert sort que diz o número de saltos a serem feitos.Quando h=1, corresponde ao insertion sort padrão. 
 
