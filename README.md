@@ -3,7 +3,7 @@
 - Bubble Sort:
     - O(n^2), Não adaptativo, estável e in-place
 - Selection Sort:
-    - O(n^2), Não adaptativo, estável e in-place
+    - O(n^2), Não adaptativo, Não estável e in-place
 - Insertion Sort:
     - O(n^2), adaptativo, estável e in-place
 - Shell Sort:
