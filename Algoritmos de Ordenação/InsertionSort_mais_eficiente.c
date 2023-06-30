@@ -6,7 +6,7 @@ void InsertionSort(Item *vetor, int left, int right){
 
     for (int i = right; i > left; i--)
     {
-        cmpswap(vetor[i-1], vetor[i]);  //esse for pega o menor valor
+        compexch(vetor[i-1], vetor[i]);  //esse for pega o menor valor
     }
     for (int i = left+2; i <= right; i++)
     {

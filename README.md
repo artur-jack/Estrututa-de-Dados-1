@@ -227,3 +227,38 @@ Chama quickSort(vetor, 3, 3) (não faz nada, pois r <= l).
 Chama quickSort(vetor, 5, 5) (não faz nada, pois r <= l).
 
 Ao final das chamadas recursivas, o vetor resultante será [1, 2, 3, 5, 8, 9], que está ordenado de forma crescente.
+
+## Intro Sort
+- É uma importante combinação de algoritmos de ordenação
+interna, utilizado na biblioteca STL (Standart Template
+Libary) da linguagem C++
+
+Híbrido:
+- quick + merge + insertion
+- quick + heap + insertion
+
+Solução para utilizar as eficiências e evitar as
+deficiências de cada método
+
+- insertion: pequenos vetores, quase ordenados
+- quick: bom desempenho na maioria dos casos
+    - quando a profundidade da recursividade atinge um máximo estipulado, aterna-se para outro método de ordenação
+
+- Complexidade no pior caso: O(nlogn)
+
+In-place?
+- Merge:
+    - Espaço extra: proporcional a N
+    - Não
+- Heap
+    - Sim
+- Quick
+    - Espaço extra: proporcional a logN
+    - Sim
+Estabilidade?
+- Merge
+    - Estável
+- Quick e Heap
+    - Não estável.
+- Adaptatividade?
+    - Não

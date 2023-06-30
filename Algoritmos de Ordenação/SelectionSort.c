@@ -12,7 +12,7 @@ for(int j = left+1; j <= right; j++){ //percorre o vetor
         menor = j;                    // e j vira o menor valor
     }
 }
-swap(vetor[menor], vetor[left]);  //o valor no indice do menor valor achado troca de lugar e vai para a posição
+exch(vetor[menor], vetor[left]);  //o valor no indice do menor valor achado troca de lugar e vai para a posição
                                   //do item no indice esquerda (Assim o menor elemento fica mais a esquerda do vetor)
 selectionSort(vetor, left+1, right);
 }
@@ -29,7 +29,7 @@ for(int i = left; i < right; i++){
             menor = j;                    // e j vira o menor valor
         }
     }
-    swap(vetor[i], vetor[menor]);  //o valor no indice do menor valor achado troca de lugar e vai para a posição
+    exch(vetor[i], vetor[menor]);  //o valor no indice do menor valor achado troca de lugar e vai para a posição
                                   //do item no indice esquerda (Assim o menor elemento fica mais a esquerda do vetor)
 }
 }

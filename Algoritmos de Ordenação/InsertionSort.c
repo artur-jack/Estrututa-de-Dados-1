@@ -10,7 +10,7 @@ void InsertionSort(Item *vetor, int left, int right){
     {
         for (int j = i; j > left; j--)
         {
-            cmpswap(vetor[j], vetor[j-1])
+            compexch(vetor[j], vetor[j-1])
         } 
     }
 }

@@ -8,7 +8,7 @@ for (int i = left; i < right; i++)
 {
     for (int j = left; j < right; j++)
     {   
-        cmpswap(vetor[j+1], vetor[j]); //essa macro faz a mesma coisa que o if embaixo 
+        compexch(vetor[j+1], vetor[j]); //essa macro faz a mesma coisa que o if embaixo 
         
         /*if (less(vetor[j+1], vetor[j]))
         {
