@@ -198,35 +198,9 @@ A complexidade assintótica do QuickSort depende da implementação e da escolha
 
 Para fugir do pior caso, estratégias como a escolha do **pivô mediano ou a seleção aleatória do pivô** são frequentemente utilizadas. Além disso, técnicas como o QuickSort de três vias ou o QuickSort com inserção podem ser aplicadas para melhorar o desempenho em certas situações, tornando o algoritmo mais eficiente em casos reais.
 
-### Exemplo de uso:
+## Heap Sort
 
-Suponha que temos o seguinte vetor: [5, 2, 8, 9, 3, 1].
-Chamada da função quickSort(vetor, 0, 5):
-
-Primeira chamada recursiva:
-
-Chama a função partition e retorna o índice p (nesse exemplo, suponha que seja 2).
-
-Chama quickSort(vetor, 0, 1), que ordena o subvetor [5, 2].
-
-Chama quickSort(vetor, 3, 5), que ordena o subvetor [9, 3, 1].
-
-Chamada recursiva de quickSort(vetor, 0, 1):
-
-Chama a função partition e retorna o índice p (nesse exemplo, suponha que seja 1).
-Chama quickSort(vetor, 0, 0), que ordena o subvetor [5].
-
-Chama quickSort(vetor, 2, 1) (não faz nada, pois r <= l).
-
-Chamada recursiva de quickSort(vetor, 3, 5):
-
-Chama a função partition e retorna o índice p (nesse exemplo, suponha que seja 4).
-
-Chama quickSort(vetor, 3, 3) (não faz nada, pois r <= l).
-
-Chama quickSort(vetor, 5, 5) (não faz nada, pois r <= l).
-
-Ao final das chamadas recursivas, o vetor resultante será [1, 2, 3, 5, 8, 9], que está ordenado de forma crescente.
+A ideia é meio que se pegar um vetor, transformar ele numa heap e remover tudo da heap no final vai ter um vetor ordenado. Isso é o Heap Sort, ele vem removendo da heap e vai sendo ordenado a cada remoção. Pois na remoção da heap a raiz que é o elemento de maior prioridade é jogado para o ultimo indice da fila e é "removido" pois diminui o tamanho da fila, mas o elemento continua lá. Assim como os maiores elementos vão indo para o final a cada remoção teremos um vetor ordenado no final.
 
 ## Intro Sort
 - É uma importante combinação de algoritmos de ordenação
