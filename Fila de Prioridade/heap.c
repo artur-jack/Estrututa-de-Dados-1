@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef int Item;
 
@@ -90,6 +91,29 @@ void pop(Heap* h){
     fixDown(h, 1); //fixDown do elemento que a gente trocou com a raiz para coloca-lo em sua posição correta
 }
 
-int main(){
+//Transforma o vetor em uma heap
+void heapfy(Heap* h){
+    for (int i = h->size; i > 0; i--)
+    {
+        fixUp(h, i);
+    }
+}
 
+int main(){
+    Item a[] = {4,3,2,1};
+    int n = 4;
+
+    Heap minhaHeap;
+    minhaHeap.v = a-1;
+    minhaHeap.size = n;
+
+    heapfy(&minhaHeap);
+    while (!isEmpty(&minhaHeap))
+    {
+        pop(&minhaHeap);
+    }
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%d ", a[i]);
+    }  
 }

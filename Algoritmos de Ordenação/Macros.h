@@ -11,7 +11,7 @@
 typedef int Item;
 
 #define key(A) (A)
-#define less(A, B) (key(A) < key(B))
+#define less(A, B) ((A) < (B))
 #define exch(A, B) { Item t=A; A=B; B=t; }
 #define compexch(A, B) if(less(B, A)) exch(A, B)
 
@@ -519,64 +519,64 @@ void radix_sort(int *v,  int l, int r)
 }
 
 //./a.out counting < exemplo.txt
-int main(int argc, char *argv[]) {
-    int n;
-    scanf("%d", &n);
+// int main(int argc, char *argv[]) {
+//     int n;
+//     scanf("%d", &n);
     
-    int *v = malloc(n*sizeof(int));
-    for(int i=0; i<n; i++) {
-        scanf("%d", &v[i]);
-    }
+//     int *v = malloc(n*sizeof(int));
+//     for(int i=0; i<n; i++) {
+//         scanf("%d", &v[i]);
+//     }
 
-    if(n<50) 
-        show(v, 0, n-1);
+//     if(n<50) 
+//         show(v, 0, n-1);
 
-    if(argc>1){
-        if(!strcmp(argv[1], "shaker"))
-            shaker_sort(v, 0, n-1);
-        else if(!strcmp(argv[1], "bubble"))
-            bubble_sort(v, 0, n-1);
-        else if(!strcmp(argv[1], "selection"))
-            selection_sort(v, 0, n-1);
-        else if(!strcmp(argv[1], "insertion"))
-            insertion_sort(v, 0, n-1);
-        else if(!strcmp(argv[1], "shell"))
-            shell_sort(v, 0, n-1);
-        else if(!strcmp(argv[1], "merge"))
-            merge_sort(v, 0, n-1);
-        else if(!strcmp(argv[1], "mergebu"))
-            mergeBU_sort(v, 0, n-1);
-        else if(!strcmp(argv[1], "quickC"))
-            quick_sortC(v, 0, n-1);
-        else if(!strcmp(argv[1], "quickR"))
-            quick_sortR(v, 0, n-1);
-        else if(!strcmp(argv[1], "quickRM3"))
-            quick_sortRM3(v, 0, n-1);
-        else if(!strcmp(argv[1], "quickLM3"))
-            quick_sortLM3(v, 0, n-1);
-        else if(!strcmp(argv[1], "quickL"))
-            quick_sortL(v, 0, n-1);
-        else if(!strcmp(argv[1], "quickM3I")){
-            quick_sortM3I(v, 0, n-1);
-            insertion_sort(v, 0, n-1);
-        }
-        else if(!strcmp(argv[1], "quickM3W"))
-            quick_sortM3W(v, 0, n-1);
-        else if(!strcmp(argv[1], "intro"))
-            intro_sort(v, 0, n-1); 
-        else if(!strcmp(argv[1], "radix"))
-            radix_sort(v, 0, n-1); 
-    }
+//     if(argc>1){
+//         if(!strcmp(argv[1], "shaker"))
+//             shaker_sort(v, 0, n-1);
+//         else if(!strcmp(argv[1], "bubble"))
+//             bubble_sort(v, 0, n-1);
+//         else if(!strcmp(argv[1], "selection"))
+//             selection_sort(v, 0, n-1);
+//         else if(!strcmp(argv[1], "insertion"))
+//             insertion_sort(v, 0, n-1);
+//         else if(!strcmp(argv[1], "shell"))
+//             shell_sort(v, 0, n-1);
+//         else if(!strcmp(argv[1], "merge"))
+//             merge_sort(v, 0, n-1);
+//         else if(!strcmp(argv[1], "mergebu"))
+//             mergeBU_sort(v, 0, n-1);
+//         else if(!strcmp(argv[1], "quickC"))
+//             quick_sortC(v, 0, n-1);
+//         else if(!strcmp(argv[1], "quickR"))
+//             quick_sortR(v, 0, n-1);
+//         else if(!strcmp(argv[1], "quickRM3"))
+//             quick_sortRM3(v, 0, n-1);
+//         else if(!strcmp(argv[1], "quickLM3"))
+//             quick_sortLM3(v, 0, n-1);
+//         else if(!strcmp(argv[1], "quickL"))
+//             quick_sortL(v, 0, n-1);
+//         else if(!strcmp(argv[1], "quickM3I")){
+//             quick_sortM3I(v, 0, n-1);
+//             insertion_sort(v, 0, n-1);
+//         }
+//         else if(!strcmp(argv[1], "quickM3W"))
+//             quick_sortM3W(v, 0, n-1);
+//         else if(!strcmp(argv[1], "intro"))
+//             intro_sort(v, 0, n-1); 
+//         else if(!strcmp(argv[1], "radix"))
+//             radix_sort(v, 0, n-1); 
+//     }
     
 
-    if(n<50) 
-        show(v, 0, n-1);
+//     if(n<50) 
+//         show(v, 0, n-1);
 
-    if(is_sorted(v, 0, n-1)) printf("ordenado.\n");
-    else printf("nÃ£o ordenado.\n");
+//     if(is_sorted(v, 0, n-1)) printf("ordenado.\n");
+//     else printf("nÃ£o ordenado.\n");
 
     
-    return 0;
-}
+//     return 0;
+// }
 
 

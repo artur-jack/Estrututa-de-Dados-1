@@ -202,6 +202,20 @@ Para fugir do pior caso, estratégias como a escolha do **pivô mediano ou a sel
 
 A ideia é meio que se pegar um vetor, transformar ele numa heap e remover tudo da heap no final vai ter um vetor ordenado. Isso é o Heap Sort, ele vem removendo da heap e vai sendo ordenado a cada remoção. Pois na remoção da heap a raiz que é o elemento de maior prioridade é jogado para o ultimo indice da fila e é "removido" pois diminui o tamanho da fila, mas o elemento continua lá. Assim como os maiores elementos vão indo para o final a cada remoção teremos um vetor ordenado no final.
 
+- Sua complexidade é ***log n***.
+- ***Não é adaptativo***.
+- ***Não é estável***.
+- ***In-place***.
+
+## Count Sort
+
+Basicamente a ideia é contar quantas vezes aparece cada elemento do array não ordenado, a partir dessa contagem nós conseguimos saber a partir de que posição o proxímo elemento vai aparecer no array e também a posição onde nosso elemento vai começar.
+
+-
+- ***Não é adaptativo***.
+- É ***estável***.
+- ***Não é In-place.***
+
 ## Intro Sort
 - É uma importante combinação de algoritmos de ordenação
 interna, utilizado na biblioteca STL (Standart Template
