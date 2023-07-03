@@ -216,6 +216,14 @@ Basicamente a ideia é contar quantas vezes aparece cada elemento do array não 
 - É ***estável***.
 - ***Não é In-place.***
 
+## Radix Sort
+
+Ele ordena comparando digito a digito dos números.(onde tem que usar uma mask com números, com string é mais facil). Ele é basicamente o countSort
+
+- ***Não é adaptativo***.
+- É ***estável***.
+- ***Não é In-place.***
+
 ## Intro Sort
 - É uma importante combinação de algoritmos de ordenação
 interna, utilizado na biblioteca STL (Standart Template
