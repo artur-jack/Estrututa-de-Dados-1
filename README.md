@@ -258,3 +258,20 @@ Estabilidade?
     - Não estável.
 - Adaptatividade?
     - Não
+
+## Busca binária
+
+Pegamos o meio do vetor e verifica se o meio é ou menor que o valor que procuramos. Caso o meio seja maior que o alvo, procuramos o valor no lado esquerdo do vetor onde o inicio vai ser o começo normal do vetor e fim vai passar a ser meio-1. Caso o meio seja menor que o alvo, procuramos o valor no lado direito do vetor onde o inicio vai passar a ser o meio+1 e o fim vai ser o final normal do vetor. Se não for nem maior nem menor, nosso valor só pode ser o meio (tem que verificar tbm se o valor que procuramos existe). Retornamos ele.
+
+## Árvore Binária de Busca
+
+Tem como propriedade que todos os elementos a esquerda da raiz são menores que ele 
+e a direita dele todos são maiores.
+
+Uma árvore balanceada significa que a altura das subarvores estão iguais ou quase iguais.
+
+- Se percorremos uma Árvore Binária de Busca na forma in-order, teremos os elementos ordenados.
+
+## Tabela de simbolos
+
+É uma estrutura onde tem uma chave e um valor, onde não são admitidas chaves repetidas e o custo depende da implementação.
