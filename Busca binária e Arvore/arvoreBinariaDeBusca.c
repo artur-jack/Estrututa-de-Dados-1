@@ -55,32 +55,32 @@ Node *buscar(Node *root, Key k) {
 
 Node *minNode(Node *root) { //Pegar o menor nó
   if (root->left == NULL) {
-    return root;
+    return root;    //se o elemento a esquerda for nul,q uer dizer que esse é o menor
   }
 
-  return minNode(root->left);
+  return minNode(root->left);   //se não faz a recursão passando o proximo elemento a esquerda
 }
 
 Node *deleteMinNode(Node *root) {
-  if (root->left == NULL) {
-    return root->right;
+  if (root->left == NULL) { //se for nuul a esquerda, ele é o elemento a ser deletado
+    return root->right;     //retorna o filho da direita desse menor elemento, assim o pai do deletado vai assumir o orfão
   }
 
-  root->left = deleteMinNode(root->left);
+  root->left = deleteMinNode(root->left);//se tiver elemento a esquerda, usa a recursão passando o filho a esquerda
   return root;
 }
 
 Node *deleteNode(Node *root, Key k) {
-  if (root == NULL) {
+  if (root == NULL) { //se for null item não existe
     return NULL;
   }
 
   Key actualKey = key(root->item);
 
   if (lessKey(actualKey, k)) {
-    root->right = deleteNode(root->right, k);
+    root->right = deleteNode(root->right, k);//busca o elemento
   } else if (lessKey(k, actualKey)) {
-    root->left = deleteNode(root->left, k);
+    root->left = deleteNode(root->left, k);//busca o elemento
   } else {
     if (root->left == NULL) {
       Node *aux = root->right;
